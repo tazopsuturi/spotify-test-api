@@ -11,6 +11,8 @@ public class SpotifyAPI {
 	
 	public static void main(String[] args) throws Exception {
 		String token = getAccessToken();
+		String artistId = ArtistID.getArtistID("Eminem", token);
+		TopTracks.getTopTracks(artistId, token);
 		System.out.println(token);
 	}
 	

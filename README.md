@@ -21,23 +21,7 @@ set SPOTIFY_CLIENT_ID=your_client_id
 set SPOTIFY_CLIENT_SECRET=your_client_secret
 ```
 
-## Running the Application
-
-### Clone the repository:
-
-```sh
-git clone https://github.com/your-repo-name.git
-cd your-repo-name
-```
-
-### Compile and run the Java program:
-
-```sh
-javac SpotifyApp.java
-java SpotifyApp
-```
-
 ### How It Works
-- The application retrieves an access token using the Spotify API.  
-- It searches for an artist by name and fetches their Spotify ID.  
+- The application retrieves an access token using the Spotify API.
+- It searches for an artist by name and fetches their Spotify ID.
 - It retrieves and displays the artist's top tracks.  

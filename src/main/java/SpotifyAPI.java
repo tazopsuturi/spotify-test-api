@@ -13,7 +13,6 @@ public class SpotifyAPI {
 		String token = getAccessToken();
 		String artistId = ArtistID.getArtistID("Eminem", token);
 		TopTracks.getTopTracks(artistId, token);
-		System.out.println(token);
 	}
 	
 	private static String getAccessToken() throws IOException {
@@ -31,8 +30,9 @@ public class SpotifyAPI {
 			os.write("grant_type=client_credentials".getBytes());
 		}
 		
-		String response = conn.getResponseMessage();
-		JSONObject json = new JSONObject(response);
-		return json.getString("access_token");
+		String response = ReadResponse.readResponse(conn);
+		JSONObject jsonObject = new JSONObject(response);
+		return jsonObject.getString("access_token");
+		
 	}
 }
